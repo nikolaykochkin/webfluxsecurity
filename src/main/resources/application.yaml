@@ -1,0 +1,22 @@
+server:
+  port: 8085
+
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/webfluxsecurity
+    username: postgres
+    password: example
+  flyway:
+    url: jdbc:postgresql://localhost:5432/webfluxsecurity
+    user: postgres
+    password: example
+
+jwt:
+  password:
+    encoder:
+      secret: da6dd539-0f3f-49a6-bf7a-dd2467c38201
+      iteration: 64
+      key-length: 256
+  secret: supersecretsupersecretsupersecret
+  expiration: PT1H
+  issuer: webflux_security_service
